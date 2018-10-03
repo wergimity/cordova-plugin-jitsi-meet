@@ -9,7 +9,7 @@ CDVPluginResult *pluginResult = nil;
 - (void)loadURL:(CDVInvokedUrlCommand *)command {
     NSString* url = [command.arguments objectAtIndex:0];
     NSString* key = [command.arguments objectAtIndex:1];
-    Boolean* isInvisible = [command.arguments objectAtIndex:2];
+    Boolean isInvisible = [[command.arguments objectAtIndex:2] boolValue];
     commandBack = command;
     jitsiMeetView = [[JitsiMeetView alloc] initWithFrame:self.viewController.view.frame];
     jitsiMeetView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
