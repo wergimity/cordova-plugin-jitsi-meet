@@ -28,7 +28,8 @@ public class JitsiPlugin extends CordovaPlugin{
         if (action.equals("loadURL")) {
             String url = args.getString(0);
             String key = args.getString(1);
-            this.loadURL(url, key, callbackContext);
+            Boolean isInvisible = args.getBoolean(2);
+            this.loadURL(url, key, isInvisible, callbackContext);
             return true;
         }else if (action.equals("destroy")) {
             this.destroy(callbackContext);
@@ -38,7 +39,7 @@ public class JitsiPlugin extends CordovaPlugin{
     }
 
 
-    private void loadURL(final String url, final String key, final CallbackContext callbackContext){
+    private void loadURL(final String url, final String key, final Boolean isInvisible, final CallbackContext callbackContext){
         Log.e(TAG, "loadURL called" );
 
 
@@ -54,7 +55,9 @@ public class JitsiPlugin extends CordovaPlugin{
                 urlObject.putBundle("config", config);
                 urlObject.putString("url", url);
                 view.loadURLObject(urlObject);
-                cordova.getActivity().setContentView(view);
+                if (!isInvisible) {
+                    cordova.getActivity().setContentView(view);
+                }
             }
         });
 

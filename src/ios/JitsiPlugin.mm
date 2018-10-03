@@ -9,6 +9,7 @@ CDVPluginResult *pluginResult = nil;
 - (void)loadURL:(CDVInvokedUrlCommand *)command {
     NSString* url = [command.arguments objectAtIndex:0];
     NSString* key = [command.arguments objectAtIndex:1];
+    Boolean* isInvisible = [command.arguments objectAtIndex:2];
     commandBack = command;
     jitsiMeetView = [[JitsiMeetView alloc] initWithFrame:self.viewController.view.frame];
     jitsiMeetView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -16,12 +17,14 @@ CDVPluginResult *pluginResult = nil;
     jitsiMeetView.welcomePageEnabled = NO;
     [jitsiMeetView loadURLObject:@{
         @"config": @{
-            @"startWithAudioMuted": @YES,
-            @"startWithVideoMuted": @NO
+            @"startWithAudioMuted": @NO,
+            @"startWithVideoMuted": @YES
         },
         @"url": url
     }];
-    [self.viewController.view addSubview:jitsiMeetView];
+    if (!isInvisible) {
+       [self.viewController.view addSubview:jitsiMeetView];
+    }
 }
 
 
@@ -38,7 +41,7 @@ void _onJitsiMeetViewDelegateEvent(NSString *name, NSDictionary *data) {
     NSLog(
         @"[%s:%d] JitsiMeetViewDelegate %@ %@",
         __FILE__, __LINE__, name, data);
-    
+
 }
 
 - (void)conferenceFailed:(NSDictionary *)data {
