@@ -4,7 +4,7 @@
   "cordova_name": "JitsiPlugin",
   "description": "This plugin allows Jitsi Webrtc",
   "license": "Auris",
-  "repo": "https://github.com/gaganinvic/cordova-plugin-jitsi-meet",
+  "repo": "https://github.com/mnill/cordova-plugin-jitsi-meet",
   "issue": "",
   "keywords": [],
   "platforms": [
