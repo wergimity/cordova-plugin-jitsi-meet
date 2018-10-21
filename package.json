@@ -1,10 +1,10 @@
 {
-  "version": "0.0.1",
+  "version": "0.0.2",
   "name": "cordova-plugin-jitsi",
   "cordova_name": "JitsiPlugin",
   "description": "This plugin allows Jitsi Webrtc",
   "license": "Auris",
-  "repo": "https://github.com/mnill/cordova-plugin-jitsi-meet",
+  "repo": "https://github.com/gaganinvic/cordova-plugin-jitsi-meet",
   "issue": "",
   "keywords": [],
   "platforms": [
@@ -16,5 +16,21 @@
       "name": "cordova",
       "version": ">=3.5.0"
     }
-  ]
+  ],
+  "cordova": {
+    "id": "cordova-plugin-jitsi",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnill/cordova-plugin-jitsi-meet.git"
+  },
+  "author": "gaganinvic",
+  "bugs": {
+    "url": "https://github.com/mnill/cordova-plugin-jitsi-meet/issues"
+  },
+  "homepage": "https://github.com/mnill/cordova-plugin-jitsi-meet#readme"
 }
