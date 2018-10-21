@@ -1,22 +1,7 @@
 {
+  "name": "cordova-plugin-jitsi-meet",
   "version": "0.0.2",
-  "name": "cordova-plugin-jitsi",
-  "cordova_name": "JitsiPlugin",
-  "description": "This plugin allows Jitsi Webrtc",
-  "license": "Auris",
-  "repo": "https://github.com/mnill/cordova-plugin-jitsi-meet",
-  "issue": "",
-  "keywords": [],
-  "platforms": [
-    "android",
-    "ios"
-  ],
-  "engines": [
-    {
-      "name": "cordova",
-      "version": ">=3.5.0"
-    }
-  ],
+  "description": "\n       This is plugin for Jitsi Meet calling service!\n    ",
   "cordova": {
     "id": "cordova-plugin-jitsi",
     "platforms": [
@@ -28,7 +13,13 @@
     "type": "git",
     "url": "git+https://github.com/mnill/cordova-plugin-jitsi-meet.git"
   },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
   "author": "gaganinvic",
+  "license": "Auris",
   "bugs": {
     "url": "https://github.com/mnill/cordova-plugin-jitsi-meet/issues"
   },
