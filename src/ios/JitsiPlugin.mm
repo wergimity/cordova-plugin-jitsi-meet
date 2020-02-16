@@ -18,7 +18,7 @@ CDVPluginResult *pluginResult = nil;
     [jitsiMeetView loadURLObject:@{
         @"config": @{
             @"startWithAudioMuted": @NO,
-            @"startWithVideoMuted": @YES
+            @"startWithVideoMuted": @NO
         },
         @"url": url
     }];

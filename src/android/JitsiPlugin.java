@@ -50,7 +50,7 @@ public class JitsiPlugin extends CordovaPlugin{
                 view.setWelcomePageEnabled(false);
                 Bundle config = new Bundle();
                 config.putBoolean("startWithAudioMuted", false);
-                config.putBoolean("startWithVideoMuted", true);
+                config.putBoolean("startWithVideoMuted", false);
                 Bundle urlObject = new Bundle();
                 urlObject.putBundle("config", config);
                 urlObject.putString("url", url);
