@@ -122,6 +122,7 @@ public class JitsiPlugin extends CordovaPlugin implements JitsiMeetActivityInter
           .setRoom(url)
           .setSubject(" ")
           .setFeatureFlag("chat.enabled", false)
+          .setFeatureFlag("invite.enabled", false)          
           .setFeatureFlag("calendar.enabled", false)
           .setWelcomePageEnabled(false)
           .build();
