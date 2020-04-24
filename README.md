@@ -7,9 +7,6 @@ I created this repo as there were multiple versions of this plugin, one which wo
 # Installation
 `cordova plugin add https://github.com/findmate/cordova-plugin-jitsi-meet`
 
-## iOS Installation
-On iOS/Xcode you will need to manually specify the WebRTC and JitsiMeet frameworks manually to be embedded.
-
 # Usage
 ```
 const roomId = 'your-custom-room-id';
